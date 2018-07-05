@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "babel-plugin-react-css-modules": "3.4.2",
     "prop-types": "15.6.2",
     "react": "16.3.2",
     "react-css-modules": "4.7.3",
