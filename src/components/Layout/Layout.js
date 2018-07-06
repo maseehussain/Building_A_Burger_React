@@ -18,7 +18,10 @@ class Layout extends React.Component {
     return (
       <Aux>
         <Toolbar />
-        <SideDrawer closed={this.sideDrawerCLosedHandler} />
+        <SideDrawer
+          open={this.state.showSideDrawer}
+          closed={this.sideDrawerCLosedHandler}
+        />
         <main className="Content">{this.props.children}</main>
       </Aux>
     );
