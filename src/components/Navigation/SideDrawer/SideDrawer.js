@@ -9,7 +9,7 @@ import Aux from "../../../hoc/Aux";
 const sideDrawer = props => {
   return (
     <Aux>
-      <Backdrop show />
+      <Backdrop show={props.open} clicked={props.closed} />
       <div className="SideDrawer">
         <div className="LogoSideDrawer">
           <Logo />
