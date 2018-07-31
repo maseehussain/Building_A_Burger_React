@@ -1,10 +1,10 @@
 import React from "react";
 
-import Aux from "../../../hoc/Aux";
+import Aux from "../../../hoc/Aux/Aux";
 import Button from "../../UI/Button/Button";
 
 class OrderSummary extends React.Component {
-  //Thsi could be a functional component, doesn't have to be a class component.
+  //This could be a functional component, doesn't have to be a class component.
   componentWillMount() {
     console.log("[OrderSummary] WillUpdate");
   }
