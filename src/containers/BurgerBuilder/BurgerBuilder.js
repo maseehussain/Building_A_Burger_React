@@ -8,18 +8,18 @@ import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 
 const INGREDIENT_PRICES = {
   salad: 0.5,
+  bacon: 1.0,
   cheese: 0.5,
-  meat: 2.0,
-  bacon: 1.0
+  meat: 2.0
 };
 
 class BurgerBuilder extends React.Component {
   state = {
     ingredients: {
       salad: 0,
+      bacon: 0,
       cheese: 0,
-      meat: 0,
-      bacon: 0
+      meat: 0
     },
     totalPrice: 1,
     purchasable: false,
