@@ -79,6 +79,21 @@ class BurgerBuilder extends React.Component {
 
   purchaseContinueHandler = () => {
     //alert("You Continue!");
+    const order = {
+      ingredients: this.state.ingredients,
+      price: this.state.totalPrice,
+      customer: {
+        name: "Masee Hussain",
+        address: {
+          street: "One Piece Street",
+          postCode: "1000",
+          country: "UK"
+        },
+        email: "masee@onepiece.com"
+      },
+      deliveryMethod: "fastest"
+    };
+    Axios.post("/orders.json");
   };
 
   render() {
