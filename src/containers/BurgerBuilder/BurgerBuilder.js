@@ -149,4 +149,4 @@ class BurgerBuilder extends React.Component {
   }
 }
 
-export default withErrorHandler(BurgerBuilder);
+export default withErrorHandler(BurgerBuilder, Axios);
