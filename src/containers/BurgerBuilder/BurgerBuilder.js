@@ -119,13 +119,16 @@ class BurgerBuilder extends React.Component {
     );
 
     if (this.state.loading) {
+      orderSummary = <Spinner />;
     }
     return (
       <Aux>
         <Modal
           show={this.state.purchasing}
           modalClosed={this.purchaseCancelHandler}
-        />
+        >
+          {orderSummary}
+        </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls
           ingredientAdded={this.addIngredientHandler}
