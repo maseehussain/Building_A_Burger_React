@@ -1,8 +1,16 @@
 import React from "react";
 
+import Modal from "../../components/UI/Modal/Modal";
+import Aux from "../Aux/Aux";
+
 const withErrorHandler = WrappedComponent => {
   return props => {
-    return <WrappedComponent {...props} />;
+    return (
+      <Aux>
+        <Modal>Something didn't work!</Modal>
+        <WrappedComponent {...props} />
+      </Aux>
+    );
   };
 };
 
