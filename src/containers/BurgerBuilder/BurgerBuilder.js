@@ -93,7 +93,7 @@ class BurgerBuilder extends React.Component {
       },
       deliveryMethod: "fastest"
     };
-    Axios.post("/orders.json");
+    Axios.post("/orders.json", order).then(res => console.log(res));
   };
 
   render() {
