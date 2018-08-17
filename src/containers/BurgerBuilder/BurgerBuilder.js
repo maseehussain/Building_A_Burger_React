@@ -30,6 +30,10 @@ class BurgerBuilder extends React.Component {
     loading: false
   };
 
+  componentDidMount() {
+    Axios.get("https://react-masee-burger.firebaseio.com/ingredients");
+  }
+
   updatePurchaseState(ingredients) {
     const sum = Object.keys(ingredients)
       .map(igKey => {
