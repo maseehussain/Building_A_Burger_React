@@ -10,7 +10,7 @@ const withErrorHandler = (WrappedComponent, Axios) => {
     };
 
     componentWillMount() {
-      Axios.interceptors.request.use(req => {
+      this.reqInterceptor = Axios.interceptors.request.use(req => {
         this.setState({ error: null });
         return req;
       });
