@@ -22,15 +22,18 @@ class BurgerBuilder extends React.Component {
     totalPrice: 1,
     purchasable: false,
     purchasing: false,
-    loading: false
+    loading: false,
+    error: null
   };
 
   componentDidMount() {
-    Axios.get(
-      "https://react-masee-burger.firebaseio.com/ingredients.json"
-    ).then(res => {
-      this.setState({ ingredients: res.data });
-    });
+    Axios.get("https://react-masee-burger.firebaseio.com/ingredients")
+      .then(res => {
+        this.setState({ ingredients: res.data });
+      })
+      .catch(error => {
+        this.setState({ error: true });
+      });
   }
 
   updatePurchaseState(ingredients) {
