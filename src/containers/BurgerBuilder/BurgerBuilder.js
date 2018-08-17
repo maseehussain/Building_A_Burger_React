@@ -120,10 +120,6 @@ class BurgerBuilder extends React.Component {
 
     let orderSummary = null;
 
-    if (this.state.loading) {
-      orderSummary = <Spinner />;
-    }
-
     let burger = <Spinner />;
 
     if (this.state.ingredients) {
@@ -151,6 +147,10 @@ class BurgerBuilder extends React.Component {
       );
     }
 
+    if (this.state.loading) {
+      orderSummary = <Spinner />;
+    }
+
     return (
       <Aux>
         <Modal
@@ -159,6 +159,7 @@ class BurgerBuilder extends React.Component {
         >
           {orderSummary}
         </Modal>
+        {burger}
       </Aux>
     );
   }
