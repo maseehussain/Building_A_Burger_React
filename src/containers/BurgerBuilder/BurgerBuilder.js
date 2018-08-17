@@ -27,7 +27,7 @@ class BurgerBuilder extends React.Component {
   };
 
   componentDidMount() {
-    Axios.get("https://react-masee-burger.firebaseio.com/ingredients")
+    Axios.get("https://react-masee-burger.firebaseio.com/ingredients.json")
       .then(res => {
         this.setState({ ingredients: res.data });
       })
@@ -123,7 +123,11 @@ class BurgerBuilder extends React.Component {
 
     let orderSummary = null;
 
-    let burger = <Spinner />;
+    let burger = this.state.error ? (
+      <p>Ingredients can't be loaded!</p>
+    ) : (
+      <Spinner />
+    );
 
     if (this.state.ingredients) {
       burger = (
