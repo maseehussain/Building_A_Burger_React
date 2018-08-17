@@ -28,7 +28,9 @@ class BurgerBuilder extends React.Component {
   componentDidMount() {
     Axios.get(
       "https://react-masee-burger.firebaseio.com/ingredients.json"
-    ).then(res => {});
+    ).then(res => {
+      this.setState({ ingredients: res.data });
+    });
   }
 
   updatePurchaseState(ingredients) {
@@ -128,14 +130,11 @@ class BurgerBuilder extends React.Component {
     if (this.state.loading) {
       orderSummary = <Spinner />;
     }
-    return (
+
+    let burger = <Spinner />;
+
+    burger = (
       <Aux>
-        <Modal
-          show={this.state.purchasing}
-          modalClosed={this.purchaseCancelHandler}
-        >
-          {orderSummary}
-        </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls
           ingredientAdded={this.addIngredientHandler}
@@ -145,6 +144,17 @@ class BurgerBuilder extends React.Component {
           ordered={this.purchaseHandler}
           price={this.state.totalPrice}
         />
+      </Aux>
+    );
+
+    return (
+      <Aux>
+        <Modal
+          show={this.state.purchasing}
+          modalClosed={this.purchaseCancelHandler}
+        >
+          {orderSummary}
+        </Modal>
       </Aux>
     );
   }
