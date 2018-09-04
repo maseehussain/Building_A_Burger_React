@@ -1,6 +1,6 @@
 import React from "react";
 
-import CheckoutSummary from "../../components/Order/checkoutSummary";
+import CheckoutSummary from "../../components/Order/CheckoutSummary/CheckoutSummary";
 
 class Checkout extends React.Component {
   state = {
