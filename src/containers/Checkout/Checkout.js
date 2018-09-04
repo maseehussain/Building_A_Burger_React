@@ -15,6 +15,8 @@ class Checkout extends React.Component {
   componentDidMount() {
     const query = new URLSearchParams(this.props.location.search);
     const ingredients = {};
+    for (let param of query.entries()) {
+    }
   }
 
   checkoutCancelledHandler = () => {
