@@ -18,6 +18,7 @@ class Checkout extends React.Component {
     for (let param of query.entries()) {
       ingredients[param[0]] = +param[1];
     }
+    this.setState({ ingredients: ingredients });
   }
 
   checkoutCancelledHandler = () => {
