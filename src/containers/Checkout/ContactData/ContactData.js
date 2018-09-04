@@ -14,13 +14,33 @@ class ContactData extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="ContactData">
         <h4>Enter your Contact Data</h4>
         <form>
-          <input type="text" name="name" placeholder="Your Name" />
-          <input type="email" name="email" placeholder="Your Email" />
-          <input type="text" name="street" placeholder="Street" />
-          <input type="text" name="post code" placeholder="Post Code" />
+          <input
+            className="input"
+            type="text"
+            name="name"
+            placeholder="Your Name"
+          />
+          <input
+            className="input"
+            type="email"
+            name="email"
+            placeholder="Your Email"
+          />
+          <input
+            className="input"
+            type="text"
+            name="street"
+            placeholder="Street"
+          />
+          <input
+            className="input"
+            type="text"
+            name="post code"
+            placeholder="Post Code"
+          />
           <Button btnType="Success">ORDER</Button>
         </form>
       </div>
