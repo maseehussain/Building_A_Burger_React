@@ -12,6 +12,10 @@ class Checkout extends React.Component {
     }
   };
 
+  componentDidMount() {
+    const query = new URLSearchParams(this.props.location.search);
+  }
+
   checkoutCancelledHandler = () => {
     this.props.history.goBack();
   };
