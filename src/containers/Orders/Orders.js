@@ -10,7 +10,9 @@ class Orders extends React.Component {
   };
 
   componentDidMount() {
-    Axios.get("/orders.json").then(res => {});
+    Axios.get("/orders.json").then(res => {
+      this.setState({ loading: false });
+    });
   }
 
   render() {
