@@ -43,38 +43,44 @@ class ContactData extends React.Component {
   };
 
   render() {
+    let form = (
+      <form>
+        <input
+          className="input"
+          type="text"
+          name="name"
+          placeholder="Your Name"
+        />
+        <input
+          className="input"
+          type="email"
+          name="email"
+          placeholder="Your Email"
+        />
+        <input
+          className="input"
+          type="text"
+          name="street"
+          placeholder="Street"
+        />
+        <input
+          className="input"
+          type="text"
+          name="post code"
+          placeholder="Post Code"
+        />
+        <Button btnType="Success" clicked={this.orderHandler}>
+          ORDER
+        </Button>
+      </form>
+    );
+    if (this.state.loading) {
+      form = <Spinner />;
+    }
     return (
       <div className="ContactData">
         <h4>Enter your Contact Data</h4>
-        <form>
-          <input
-            className="input"
-            type="text"
-            name="name"
-            placeholder="Your Name"
-          />
-          <input
-            className="input"
-            type="email"
-            name="email"
-            placeholder="Your Email"
-          />
-          <input
-            className="input"
-            type="text"
-            name="street"
-            placeholder="Street"
-          />
-          <input
-            className="input"
-            type="text"
-            name="post code"
-            placeholder="Post Code"
-          />
-          <Button btnType="Success" clicked={this.orderHandler}>
-            ORDER
-          </Button>
-        </form>
+        {form}
       </div>
     );
   }
