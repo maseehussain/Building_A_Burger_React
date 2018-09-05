@@ -12,6 +12,7 @@ class Orders extends React.Component {
   componentDidMount() {
     Axios.get("/orders.json")
       .then(res => {
+        console.log(res.data);
         this.setState({ loading: false });
       })
       .catch(err => {
