@@ -1,9 +1,9 @@
 import React from "react";
 
-class Order extends React.Component {
+class Orders extends React.Component {
   render () {
     return ();
   }
 }
 
-export default Order;
+export default Orders;
