@@ -5,7 +5,7 @@ import "./NavigationItem.css";
 
 const navigationItem = props => (
   <li className="NavigationItem">
-    <NavLink to={props.link} activeClassName={"active"}>
+    <NavLink to={props.link} exact activeClassName={"active"}>
       {props.children}
     </NavLink>
   </li>
