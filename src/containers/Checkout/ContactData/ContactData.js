@@ -15,7 +15,29 @@ class ContactData extends React.Component {
 
   orderHandler = event => {
     event.preventDefault();
-    console.log(this.props.ingredients);
+
+    this.setState({ loading: true });
+    const order = {
+      ingredients: this.state.ingredients,
+      price: this.state.totalPrice,
+      customer: {
+        name: "Masee Hussain",
+        address: {
+          street: "One Piece Street",
+          postCode: "1000",
+          country: "UK"
+        },
+        email: "masee@onepiece.com"
+      },
+      deliveryMethod: "fastest"
+    };
+    Axios.post("/orders.json", order)
+      .then(res => {
+        this.setState({ loading: false, purchasing: false });
+      })
+      .catch(err => {
+        this.setState({ loading: false, purchasing: false });
+      });
   };
 
   render() {
