@@ -10,7 +10,8 @@ class ContactData extends React.Component {
     address: {
       street: "",
       postCode: ""
-    }
+    },
+    loading: false
   };
 
   orderHandler = event => {
