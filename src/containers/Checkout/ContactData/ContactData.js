@@ -12,6 +12,9 @@ class ContactData extends React.Component {
       postCode: ""
     }
   };
+
+  orderHandler = () => {};
+
   render() {
     return (
       <div className="ContactData">
@@ -41,7 +44,9 @@ class ContactData extends React.Component {
             name="post code"
             placeholder="Post Code"
           />
-          <Button btnType="Success">ORDER</Button>
+          <Button btnType="Success" clicked={this.orderHandler}>
+            ORDER
+          </Button>
         </form>
       </div>
     );
