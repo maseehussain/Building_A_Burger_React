@@ -34,10 +34,10 @@ class ContactData extends React.Component {
     };
     Axios.post("/orders.json", order)
       .then(res => {
-        this.setState({ loading: false, purchasing: false });
+        this.setState({ loading: false });
       })
       .catch(err => {
-        this.setState({ loading: false, purchasing: false });
+        this.setState({ loading: false });
       });
   };
 

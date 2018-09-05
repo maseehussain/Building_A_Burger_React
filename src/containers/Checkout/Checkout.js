@@ -6,11 +6,11 @@ import ContactData from "./ContactData/ContactData";
 
 class Checkout extends React.Component {
   state = {
-    ingredients: {},
+    ingredients: null,
     price: 0
   };
 
-  componentDidMount() {
+  componentWillMount() {
     const query = new URLSearchParams(this.props.location.search);
     const ingredients = {};
     let price = 0;
