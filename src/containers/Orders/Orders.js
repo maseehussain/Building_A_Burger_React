@@ -37,4 +37,4 @@ class Orders extends React.Component {
   }
 }
 
-export default Orders;
+export default withErrorHandler(Orders);
