@@ -13,7 +13,9 @@ class ContactData extends React.Component {
     }
   };
 
-  orderHandler = () => {};
+  orderHandler = event => {
+    console.log(this.props.ingredients);
+  };
 
   render() {
     return (
