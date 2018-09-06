@@ -48,25 +48,25 @@ class ContactData extends React.Component {
     let form = (
       <form>
         <Input
-          inputType="input"
+          inputtype="input"
           type="text"
           name="name"
           placeholder="Your Name"
         />
         <Input
-          inputType="input"
+          inputtype="input"
           type="email"
           name="email"
           placeholder="Your Email"
         />
         <Input
-          inputType="input"
+          inputtype="input"
           type="text"
           name="street"
           placeholder="Street"
         />
         <Input
-          inputType="input"
+          inputtype="input"
           type="text"
           name="post code"
           placeholder="Post Code"
@@ -81,7 +81,7 @@ class ContactData extends React.Component {
     }
     return (
       <div className="ContactData">
-        <h4>Enter your Contact Data</h4>
+        <h4>Please enter your Details</h4>
         {form}
       </div>
     );
