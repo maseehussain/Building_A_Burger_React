@@ -47,30 +47,10 @@ class ContactData extends React.Component {
   render() {
     let form = (
       <form>
-        <input
-          className="input"
-          type="text"
-          name="name"
-          placeholder="Your Name"
-        />
-        <input
-          className="input"
-          type="email"
-          name="email"
-          placeholder="Your Email"
-        />
-        <input
-          className="input"
-          type="text"
-          name="street"
-          placeholder="Street"
-        />
-        <input
-          className="input"
-          type="text"
-          name="post code"
-          placeholder="Post Code"
-        />
+        <Input type="text" name="name" placeholder="Your Name" />
+        <Input type="email" name="email" placeholder="Your Email" />
+        <Input type="text" name="street" placeholder="Street" />
+        <Input type="text" name="post code" placeholder="Post Code" />
         <Button btnType="Success" clicked={this.orderHandler}>
           ORDER
         </Button>
