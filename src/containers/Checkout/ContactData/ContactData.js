@@ -83,12 +83,7 @@ class ContactData extends React.Component {
   render() {
     let form = (
       <form>
-        <Input
-          inputtype="input"
-          type="text"
-          name="name"
-          placeholder="Your Name"
-        />
+        <Input inputType="..." elementConfig="..." value="..." />
         <Input
           inputtype="input"
           type="email"
