@@ -8,16 +8,7 @@ import Input from "../../../components/UI/Input/Input";
 
 class ContactData extends React.Component {
   state = {
-    orderForm: {},
-    loading: false
-  };
-
-  orderHandler = event => {
-    event.preventDefault();
-    this.setState({ loading: true });
-    const order = {
-      ingredients: this.props.ingredients,
-      price: this.props.price,
+    orderForm: {
       customer: {
         name: "Masee Hussain",
         address: {
@@ -28,6 +19,16 @@ class ContactData extends React.Component {
         email: "masee@onepiece.com"
       },
       deliveryMethod: "fastest"
+    },
+    loading: false
+  };
+
+  orderHandler = event => {
+    event.preventDefault();
+    this.setState({ loading: true });
+    const order = {
+      ingredients: this.props.ingredients,
+      price: this.props.price
     };
     Axios.post("/orders.json", order)
       .then(res => {
