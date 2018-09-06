@@ -9,12 +9,56 @@ import Input from "../../../components/UI/Input/Input";
 class ContactData extends React.Component {
   state = {
     orderForm: {
-      name: "Masee Hussain",
-      street: "One Piece Street",
-      postCode: "1000",
-      country: "UK",
-      email: "masee@onepiece.com",
-      deliveryMethod: "fastest"
+      name: {
+        elementType: "input",
+        elementConfig: {
+          type: "text",
+          placeholder: "Your Name"
+        },
+        value: ""
+      },
+      street: {
+        elementType: "input",
+        elementConfig: {
+          type: "text",
+          placeholder: "Street"
+        },
+        value: ""
+      },
+      postCode: {
+        elementType: "input",
+        elementConfig: {
+          type: "text",
+          placeholder: "Post Code"
+        },
+        value: ""
+      },
+      country: {
+        elementType: "input",
+        elementConfig: {
+          type: "text",
+          placeholder: "Country"
+        },
+        value: ""
+      },
+      email: {
+        elementType: "input",
+        elementConfig: {
+          type: "email",
+          placeholder: "Your Email"
+        },
+        value: ""
+      },
+      deliveryMethod: {
+        elementType: "select",
+        elementConfig: {
+          options: [
+            { value: "fastest", displayVlaue: "fastest" },
+            { value: "cheapest", displayVlaue: "cheapest" }
+          ]
+        },
+        value: ""
+      }
     },
     loading: false
   };
