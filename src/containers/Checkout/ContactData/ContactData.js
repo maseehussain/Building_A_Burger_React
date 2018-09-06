@@ -8,12 +8,7 @@ import Input from "../../../components/UI/Input/Input";
 
 class ContactData extends React.Component {
   state = {
-    name: "",
-    email: "",
-    address: {
-      street: "",
-      postCode: ""
-    },
+    orderForm: {},
     loading: false
   };
 
