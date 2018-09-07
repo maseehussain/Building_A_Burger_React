@@ -24,6 +24,14 @@ const input = props => {
         />
       );
       break;
+    case "select":
+      inputElement = (
+        <select className="InputElement" value={props.value}>
+          <option />
+          <option />
+        </select>
+      );
+      break;
     default:
       inputElement = (
         <input
