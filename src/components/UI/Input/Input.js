@@ -27,8 +27,9 @@ const input = props => {
     case "select":
       inputElement = (
         <select className="InputElement" value={props.value}>
-          <option />
-          <option />
+          {props.elementConfig.options.map(option => (
+            <option value={option.value} />
+          ))}
         </select>
       );
       break;
