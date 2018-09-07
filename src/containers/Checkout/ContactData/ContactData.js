@@ -92,7 +92,9 @@ class ContactData extends React.Component {
     let form = (
       <form>
         <Input inputType="..." elementConfig="..." value="..." />
-        {formElementsArray.map()}
+        {formElementsArray.map(formElement => (
+          <Input elementType={formElement.config.elementType} />
+        ))}
         <Button btnType="Success" clicked={this.orderHandler}>
           ORDER
         </Button>
