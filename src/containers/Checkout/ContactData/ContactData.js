@@ -53,8 +53,8 @@ class ContactData extends React.Component {
         elementType: "select",
         elementConfig: {
           options: [
-            { value: "fastest", displayVlaue: "fastest" },
-            { value: "cheapest", displayVlaue: "cheapest" }
+            { value: "fastest", displayValue: "fastest" },
+            { value: "cheapest", displayValue: "cheapest" }
           ]
         },
         value: ""
