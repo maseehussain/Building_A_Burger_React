@@ -45,7 +45,7 @@ class ContactData extends React.Component {
         elementType: "input",
         elementConfig: {
           type: "email",
-          placeholder: "Your Email"
+          placeholder: "Email"
         },
         value: ""
       },
@@ -53,8 +53,8 @@ class ContactData extends React.Component {
         elementType: "select",
         elementConfig: {
           options: [
-            { value: "fastest", displayValue: "fastest" },
-            { value: "cheapest", displayValue: "cheapest" }
+            { value: "fastest", displayValue: "Fastest" },
+            { value: "cheapest", displayValue: "Cheapest" }
           ]
         },
         value: ""

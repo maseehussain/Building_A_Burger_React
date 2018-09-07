@@ -5,7 +5,7 @@ import "./Input.css";
 const input = props => {
   let inputElement = null;
 
-  switch (props.inputType) {
+  switch (props.elementType) {
     case "input":
       inputElement = (
         <input
@@ -28,7 +28,9 @@ const input = props => {
       inputElement = (
         <select className="InputElement" value={props.value}>
           {props.elementConfig.options.map(option => (
-            <option value={option.value}>{option.displayValue}</option>
+            <option key={option.value} value={option.value}>
+              {option.displayValue}
+            </option>
           ))}
         </select>
       );
