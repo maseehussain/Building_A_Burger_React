@@ -80,7 +80,9 @@ class ContactData extends React.Component {
       });
   };
 
-  inputChangedHandler = event => {};
+  inputChangedHandler = event => {
+    console.log(event.target.value);
+  };
 
   render() {
     const formElementsArray = [];
