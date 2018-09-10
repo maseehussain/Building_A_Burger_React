@@ -66,6 +66,7 @@ class ContactData extends React.Component {
   orderHandler = event => {
     event.preventDefault();
     this.setState({ loading: true });
+    const formData = {};
     const order = {
       ingredients: this.props.ingredients,
       price: this.props.price
