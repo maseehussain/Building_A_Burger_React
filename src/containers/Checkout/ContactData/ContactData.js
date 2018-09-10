@@ -80,6 +80,8 @@ class ContactData extends React.Component {
       });
   };
 
+  inputChangedHandler = event => {};
+
   render() {
     const formElementsArray = [];
     for (let key in this.state.orderForm) {
@@ -97,7 +99,7 @@ class ContactData extends React.Component {
             elementType={formElement.config.elementType}
             elementConfig={formElement.config.elementConfig}
             value={formElement.config.value}
-            changed={}
+            changed={this.inputChangedHandler}
           />
         ))}
         <Button btnType="Success" clicked={this.orderHandler}>
