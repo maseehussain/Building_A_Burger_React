@@ -97,6 +97,7 @@ class ContactData extends React.Component {
             elementType={formElement.config.elementType}
             elementConfig={formElement.config.elementConfig}
             value={formElement.config.value}
+            changed={}
           />
         ))}
         <Button btnType="Success" clicked={this.orderHandler}>
