@@ -18,7 +18,8 @@ class ContactData extends React.Component {
         value: "",
         validation: {
           required: true
-        }
+        },
+        valid: false
       },
       street: {
         elementType: "input",
@@ -29,7 +30,8 @@ class ContactData extends React.Component {
         value: "",
         validation: {
           required: true
-        }
+        },
+        valid: false
       },
       postCode: {
         elementType: "input",
@@ -40,7 +42,8 @@ class ContactData extends React.Component {
         value: "",
         validation: {
           required: true
-        }
+        },
+        valid: false
       },
       country: {
         elementType: "input",
@@ -51,7 +54,8 @@ class ContactData extends React.Component {
         value: "",
         validation: {
           required: true
-        }
+        },
+        valid: false
       },
       email: {
         elementType: "input",
@@ -62,7 +66,8 @@ class ContactData extends React.Component {
         value: "",
         validation: {
           required: true
-        }
+        },
+        valid: false
       },
       deliveryMethod: {
         elementType: "select",
@@ -75,7 +80,8 @@ class ContactData extends React.Component {
         value: "",
         validation: {
           required: true
-        }
+        },
+        valid: false
       }
     },
     loading: false
