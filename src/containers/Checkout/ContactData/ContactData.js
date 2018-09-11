@@ -32,7 +32,8 @@ class ContactData extends React.Component {
         validation: {
           required: true
         },
-        valid: false
+        valid: false,
+        touched: false
       },
       postCode: {
         elementType: "input",
@@ -46,7 +47,8 @@ class ContactData extends React.Component {
           minLength: 4,
           maxLength: 7
         },
-        valid: false
+        valid: false,
+        touched: false
       },
       country: {
         elementType: "input",
@@ -58,7 +60,8 @@ class ContactData extends React.Component {
         validation: {
           required: true
         },
-        valid: false
+        valid: false,
+        touched: false
       },
       email: {
         elementType: "input",
@@ -70,7 +73,8 @@ class ContactData extends React.Component {
         validation: {
           required: true
         },
-        valid: false
+        valid: false,
+        touched: false
       },
       deliveryMethod: {
         elementType: "select",
@@ -84,7 +88,8 @@ class ContactData extends React.Component {
         validation: {
           required: true
         },
-        valid: false
+        valid: false,
+        touched: false
       }
     },
     loading: false
