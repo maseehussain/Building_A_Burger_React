@@ -115,6 +115,7 @@ class ContactData extends React.Component {
     let isValid = false;
 
     if (rules.required) {
+      isValid = value.trim() !== "";
     }
   }
 
