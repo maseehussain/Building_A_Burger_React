@@ -6,7 +6,7 @@ const input = props => {
   let inputElement = null;
   const inputClasses = ["InputElement"];
 
-  if (props.invalid && props.shouldValidate) {
+  if (props.invalid && props.shouldValidate2) {
     inputClasses.push("Invalid");
   }
 
