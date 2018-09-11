@@ -41,7 +41,9 @@ class ContactData extends React.Component {
         },
         value: "",
         validation: {
-          required: true
+          required: true,
+          minLength: 4,
+          maxLength: 7
         },
         valid: false
       },
@@ -116,6 +118,14 @@ class ContactData extends React.Component {
 
     if (rules.required) {
       isValid = value.trim() !== "";
+    }
+
+    if (rules.minLength) {
+      isValid = value.length >= rules.minLength;
+    }
+
+    if (rules.maxLength) {
+      isValid = value.length <= rules.maxLength;
     }
 
     return isValid;
