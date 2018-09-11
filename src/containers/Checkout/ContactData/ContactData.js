@@ -92,6 +92,7 @@ class ContactData extends React.Component {
         touched: false
       }
     },
+    formIsValid: false,
     loading: false
   };
 
