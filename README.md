@@ -1,3 +1,3 @@
-React Burger Builder
+# React Burger Builder
 
-Course by Maximilian Schwarzmüller
+### Course by Maximilian Schwarzmüller
