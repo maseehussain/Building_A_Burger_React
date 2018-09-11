@@ -19,7 +19,8 @@ class ContactData extends React.Component {
         validation: {
           required: true
         },
-        valid: false
+        valid: false,
+        touched: false
       },
       street: {
         elementType: "input",
