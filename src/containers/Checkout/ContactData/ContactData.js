@@ -131,6 +131,7 @@ class ContactData extends React.Component {
       updatedFormElement.validation
     );
     updatedOrderForm[inputIdentifier] = updatedFormElement;
+    console.log(updatedFormElement);
     this.setState({ orderForm: updatedOrderForm });
   };
 
