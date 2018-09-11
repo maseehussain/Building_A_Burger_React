@@ -117,6 +117,8 @@ class ContactData extends React.Component {
     if (rules.required) {
       isValid = value.trim() !== "";
     }
+
+    return isValid;
   }
 
   inputChangedHandler = (event, inputIdentifier) => {
