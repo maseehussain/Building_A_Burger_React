@@ -9,12 +9,12 @@ const input = props => {
   if (props.invalid && props.shouldValidate) {
     inputClasses.push("Invalid");
   }
-
   switch (props.elementType) {
     case "input":
       inputElement = (
         <input
           className={inputClasses.join(" ")}
+          className={inputClasses}
           {...props.elementConfig}
           value={props.value}
           onChange={props.changed}
