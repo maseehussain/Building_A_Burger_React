@@ -15,7 +15,10 @@ class ContactData extends React.Component {
           type: "text",
           placeholder: "Your Name"
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true
+        }
       },
       street: {
         elementType: "input",
@@ -23,7 +26,10 @@ class ContactData extends React.Component {
           type: "text",
           placeholder: "Street"
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true
+        }
       },
       postCode: {
         elementType: "input",
@@ -31,7 +37,10 @@ class ContactData extends React.Component {
           type: "text",
           placeholder: "Post Code"
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true
+        }
       },
       country: {
         elementType: "input",
@@ -39,7 +48,10 @@ class ContactData extends React.Component {
           type: "text",
           placeholder: "Country"
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true
+        }
       },
       email: {
         elementType: "input",
@@ -47,7 +59,10 @@ class ContactData extends React.Component {
           type: "email",
           placeholder: "Email"
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true
+        }
       },
       deliveryMethod: {
         elementType: "select",
@@ -57,7 +72,10 @@ class ContactData extends React.Component {
             { value: "cheapest", displayValue: "Cheapest" }
           ]
         },
-        value: ""
+        value: "",
+        validation: {
+          required: true
+        }
       }
     },
     loading: false
