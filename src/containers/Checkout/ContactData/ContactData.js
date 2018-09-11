@@ -105,6 +105,8 @@ class ContactData extends React.Component {
       });
   };
 
+  checkValidity(value, rules) {}
+
   inputChangedHandler = (event, inputIdentifier) => {
     const updatedOrderForm = { ...this.state.orderForm };
     const updatedFormElement = { ...updatedOrderForm[inputIdentifier] };
