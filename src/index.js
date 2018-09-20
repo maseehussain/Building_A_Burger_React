@@ -11,7 +11,7 @@ import reducer from "./store/reducer";
 const store = createStore(reducer);
 
 const app = (
-  <Provider>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
