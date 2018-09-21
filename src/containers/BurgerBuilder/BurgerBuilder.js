@@ -174,7 +174,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onIngredientAdded: () => dispatch({type: })
+    onIngredientAdded: () => dispatch({ type: actionTypes.ADD_INGREDIENT })
   };
 };
 
