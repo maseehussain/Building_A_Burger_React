@@ -104,7 +104,7 @@ class ContactData extends React.Component {
       ];
     }
     const order = {
-      ingredients: this.props.ingredients,
+      ingredients: this.props.ings,
       price: this.props.price,
       orderData: formData
     };
@@ -203,4 +203,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default ContactData;
+export default connect(mapStateToProps)(ContactData);
