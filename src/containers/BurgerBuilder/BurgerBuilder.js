@@ -171,4 +171,10 @@ const mapStateToProps = state => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    onIngredientAdded: () => dispatch({type: })
+  };
+};
+
 export default withErrorHandler(BurgerBuilder, Axios);
