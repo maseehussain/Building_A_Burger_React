@@ -19,6 +19,7 @@ class BurgerBuilder extends React.Component {
   };
 
   componentDidMount() {
+    console.log(this.props);
     // Axios.get("https://react-masee-burger.firebaseio.com/ingredients.json")
     //   .then(res => {
     //     this.setState({ ingredients: res.data });
@@ -48,21 +49,7 @@ class BurgerBuilder extends React.Component {
   };
 
   purchaseContinueHandler = () => {
-    //alert("You Continue!");
-    const queryParams = [];
-    for (let i in this.state.ingredients) {
-      queryParams.push(
-        encodeURIComponent(i) +
-          "=" +
-          encodeURIComponent(this.state.ingredients[i])
-      );
-    }
-    queryParams.push("price=" + this.state.totalPrice);
-    const queryString = queryParams.join("&");
-    this.props.history.push({
-      pathname: "/Checkout",
-      search: "?" + queryString
-    });
+    this.props.history.push("/Checkout");
   };
 
   render() {
