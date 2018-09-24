@@ -11,7 +11,11 @@ import reducer from "./store/reducer";
 const store = createStore(reducer);
 
 const logger = store => {
-  return next => {};
+  return next => {
+    return action => {
+      console.log("[middleware] dispatching", action);
+    };
+  };
 };
 
 const app = (
