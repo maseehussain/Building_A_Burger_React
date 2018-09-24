@@ -10,6 +10,10 @@ import reducer from "./store/reducer";
 
 const store = createStore(reducer);
 
+const logger = store => {
+  return next => {};
+};
+
 const app = (
   <Provider store={store}>
     <BrowserRouter>
