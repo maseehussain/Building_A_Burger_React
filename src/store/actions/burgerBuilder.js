@@ -22,12 +22,20 @@ export const setIngredients = ingredients => {
   };
 };
 
+export const fetchIngredientsFailed = () => {
+  return {
+    type: actionTypes.FETCH_INGREDIENTS_FAILED
+  };
+};
+
 export const initiateIngredients = () => {
   return dispatch => {
     Axios.get("https://react-masee-burger.firebaseio.com/ingredients.json")
       .then(res => {
         dispatch(setIngredients(res.data));
       })
-      .catch(error => {});
+      .catch(error => {
+        dispatch(fetchIngredientsFailed());
+      });
   };
 };
