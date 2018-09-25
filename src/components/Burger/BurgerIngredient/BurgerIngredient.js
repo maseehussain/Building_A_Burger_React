@@ -28,7 +28,7 @@ class BurgerIngredient extends React.Component {
       case "cheese":
         ingredient = <div className="Cheese" />;
         break;
-      case "meat":
+      case "beef":
         ingredient = <div className="Meat" />;
         break;
       default:

@@ -5,7 +5,7 @@ const initialState = {
     salad: 0,
     bacon: 0,
     cheese: 0,
-    meat: 0
+    beef: 0
   },
   totalPrice: 3
 };
@@ -14,7 +14,7 @@ const INGREDIENT_PRICES = {
   salad: 0.5,
   bacon: 1.0,
   cheese: 0.5,
-  meat: 2.0
+  beef: 2.0
 };
 
 const reducer = (state = initialState, action) => {
