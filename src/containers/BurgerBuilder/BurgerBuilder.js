@@ -113,7 +113,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(burgerBuilderActions.addIngredient(ingName)),
     onIngredientRemoved: ingName =>
       dispatch(burgerBuilderActions.removeIngredient(ingName)),
-    onInitializeIngredients: () => dispatch(burgerBuilderActions)
+    onInitiateIngredients: () => dispatch(burgerBuilderActions)
   };
 };
 
