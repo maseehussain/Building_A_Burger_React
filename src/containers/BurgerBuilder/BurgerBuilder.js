@@ -18,6 +18,7 @@ class BurgerBuilder extends React.Component {
 
   componentDidMount() {
     console.log(this.props);
+    this.props.onInitiateIngredients();
   }
 
   updatePurchaseState(ingredients) {
@@ -113,7 +114,8 @@ const mapDispatchToProps = dispatch => {
       dispatch(burgerBuilderActions.addIngredient(ingName)),
     onIngredientRemoved: ingName =>
       dispatch(burgerBuilderActions.removeIngredient(ingName)),
-    onInitiateIngredients: () => dispatch(burgerBuilderActions)
+    onInitiateIngredients: () =>
+      dispatch(burgerBuilderActions.initiateIngredients())
   };
 };
 
