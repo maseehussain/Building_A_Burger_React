@@ -22,5 +22,13 @@ export const setIngredients = ingredients => {
 };
 
 export const initiateIngredients = () => {
-  return dispatch => {};
+  return dispatch => {
+    Axios.get("https://react-masee-burger.firebaseio.com/ingredients.json")
+      .then(res => {
+        this.setState({ ingredients: res.data });
+      })
+      .catch(error => {
+        this.setState({ error: true });
+      });
+  };
 };
