@@ -14,7 +14,9 @@ export const removeIngredient = ingName => {
   };
 };
 
-export const setIngredients = ingredients => {};
+export const setIngredients = ingredients => {
+  return {};
+};
 
 export const initiateIngredients = () => {
   return dispatch => {};
