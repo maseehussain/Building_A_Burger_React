@@ -13,3 +13,9 @@ export const removeIngredient = ingName => {
     ingredientName: ingName
   };
 };
+
+export const setIngredients = ingredients => {};
+
+export const initiateIngredients = () => {
+  return dispatch => {};
+};
