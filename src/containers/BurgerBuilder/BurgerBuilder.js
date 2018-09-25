@@ -8,14 +8,11 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
-import Axios from "../../axios-orders";
 import * as burgerBuilderActions from "../../store/actions/index";
 
 class BurgerBuilder extends React.Component {
   state = {
-    purchasing: false,
-    loading: false,
-    error: null
+    purchasing: false
   };
 
   componentDidMount() {
@@ -87,10 +84,6 @@ class BurgerBuilder extends React.Component {
       );
     }
 
-    if (this.state.loading) {
-      orderSummary = <Spinner />;
-    }
-
     return (
       <Aux>
         <Modal
@@ -124,4 +117,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withErrorHandler(BurgerBuilder, Axios));
+)(withErrorHandler(BurgerBuilder));

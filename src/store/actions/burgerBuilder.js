@@ -1,4 +1,5 @@
 import * as actionTypes from "./actionTypes";
+import Axios from "../../axios-orders";
 
 export const addIngredient = ingName => {
   return {
@@ -25,10 +26,8 @@ export const initiateIngredients = () => {
   return dispatch => {
     Axios.get("https://react-masee-burger.firebaseio.com/ingredients.json")
       .then(res => {
-        this.setState({ ingredients: res.data });
+        dispatch(setIngredients(res.data));
       })
-      .catch(error => {
-        this.setState({ error: true });
-      });
+      .catch(error => {});
   };
 };
