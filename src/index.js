@@ -12,13 +12,13 @@ import orderReducer from "./store/reducers/order";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const rootReducers = combineReducers({
-  ctr: burgerBuilderReducer,
-  res: orderReducer
+const rootReducer = combineReducers({
+  burgerBuilder: burgerBuilderReducer,
+  order: orderReducer
 });
 
 const store = createStore(
-  rootReducers,
+  rootReducer,
   composeEnhancers(applyMiddleware(Thunk))
 );
 
