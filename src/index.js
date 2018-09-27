@@ -10,15 +10,15 @@ import App from "./App";
 import burgerBuilderReducer from "./store/reducers/burgerBuilder";
 import orderReducer from "./store/reducers/order";
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const rootReducers = combineReducers({
   ctr: burgerBuilderReducer,
   res: orderReducer
 });
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
 const store = createStore(
-  burgerBuilderReducer,
+  rootReducers,
   composeEnhancers(applyMiddleware(Thunk))
 );
 
