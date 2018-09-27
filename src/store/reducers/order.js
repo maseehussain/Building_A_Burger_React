@@ -8,7 +8,11 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.PURCHASE_BURGER_SUCCESS:
-      return {};
+      return {
+        ...state,
+        loading: false,
+        orders: state.orders.concat()
+      };
     case actionTypes.PURCHASE_BURGER_FAIL:
       return {};
     default:
