@@ -15,13 +15,19 @@ class Checkout extends React.Component {
   };
 
   render() {
-    return (
-      <div>
+    let summary = <Redirect to="/" />;
+    if (this.props.ings) {
+      summary = (
         <CheckoutSummary
           ingredients={this.props.ings}
           checkoutCancelled={this.checkoutCancelledHandler}
           checkoutContinued={this.checkoutContinuedHandler}
         />
+      );
+    }
+    return (
+      <div>
+        {summary}
         <Route
           path={this.props.match.path + "/contact-data"}
           component={ContactData}
