@@ -109,6 +109,7 @@ class ContactData extends React.Component {
       price: this.props.price,
       orderData: formData
     };
+    this.props.onOrderBurger(order);
   };
 
   checkValidity(value, rules) {
