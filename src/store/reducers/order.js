@@ -5,4 +5,11 @@ const initialState = {
   loading: false
 };
 
-const reducer = (state = initialState, action) => {};
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case actionTypes.PURCHASE_BURGER_SUCCESS:
+      return {};
+    default:
+      return state;
+  }
+};
