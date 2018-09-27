@@ -92,8 +92,7 @@ class ContactData extends React.Component {
         valid: true
       }
     },
-    formIsValid: false,
-    loading: false
+    formIsValid: false
   };
 
   orderHandler = event => {
@@ -193,7 +192,8 @@ class ContactData extends React.Component {
 const mapStateToProps = state => {
   return {
     ings: state.ingredients,
-    price: state.totalPrice
+    price: state.totalPrice,
+    loading: state.loading
   };
 };
 
