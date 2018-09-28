@@ -22,7 +22,9 @@ class Checkout extends React.Component {
   render() {
     let summary = <Redirect to="/" />;
     if (this.props.ings) {
-      const purchasedRedirect = <Redirect to="/" />;
+      const purchasedRedirect = this.props.purchased ? (
+        <Redirect to="/" />
+      ) : null;
       summary = (
         <div>
           <CheckoutSummary
