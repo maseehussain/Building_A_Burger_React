@@ -6,6 +6,8 @@ import CheckoutSummary from "../../components/Order/CheckoutSummary/CheckoutSumm
 import ContactData from "./ContactData/ContactData";
 
 class Checkout extends React.Component {
+  componentDidMount() {}
+
   checkoutCancelledHandler = () => {
     this.props.history.goBack();
   };
@@ -38,6 +40,12 @@ class Checkout extends React.Component {
 const mapStateToProps = state => {
   return {
     ings: state.burgerBuilder.ingredients
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onInitPurchase: () => dispatch()
   };
 };
 
