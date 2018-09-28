@@ -7,7 +7,9 @@ import ContactData from "./ContactData/ContactData";
 import * as actions from "../../store/actions/index";
 
 class Checkout extends React.Component {
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.onInitPurchase();
+  }
 
   checkoutCancelledHandler = () => {
     this.props.history.goBack();
@@ -46,7 +48,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onInitPurchase: () => dispatch()
+    onInitPurchase: () => dispatch(actions.purchaseInit())
   };
 };
 
