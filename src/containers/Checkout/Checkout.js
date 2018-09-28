@@ -43,7 +43,8 @@ class Checkout extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    ings: state.burgerBuilder.ingredients
+    ings: state.burgerBuilder.ingredients,
+    purchased: state.order.purchased
   };
 };
 
