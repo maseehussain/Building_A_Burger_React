@@ -41,6 +41,7 @@ class BurgerBuilder extends React.Component {
   };
 
   purchaseContinueHandler = () => {
+    this.props.onInitPurchase();
     this.props.history.push("/Checkout");
   };
 
